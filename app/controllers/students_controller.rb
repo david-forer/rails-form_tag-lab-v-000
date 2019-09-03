@@ -9,7 +9,8 @@ class StudentsController < ApplicationController
   end
   
   def create 
-    
+    resources :students, only: :index
+  resources :students, only: [:index, :new, :create]
   end
 
 end
